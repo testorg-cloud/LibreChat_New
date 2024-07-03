@@ -1,0 +1,16 @@
+apiVersion: v2
+appVersion: v0.7.3
+dependencies:
+- condition: meilisearch.enabled
+  name: meilisearch
+  repository: https://meilisearch.github.io/meilisearch-kubernetes
+  version: 0.7.0
+- condition: librechat-rag-api.enabled
+  name: librechat-rag-api
+  repository: file://../librechat-rag-api
+  version: 0.1.4
+description: A Helm chart for LibreChat
+home: https://blue-atlas.de
+name: librechat
+type: application
+version: 1.4.3

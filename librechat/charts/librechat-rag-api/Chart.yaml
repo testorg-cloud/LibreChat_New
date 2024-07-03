@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: v0.1.0
+dependencies:
+- condition: postgresql.enabled
+  name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 15.5.5
+description: A Helm chart for LibreChat
+home: https://blue-atlas.de
+name: librechat-rag-api
+type: application
+version: 0.1.4

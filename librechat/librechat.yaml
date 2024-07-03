@@ -1,0 +1,26 @@
+
+version: 1.0.9
+
+# Cache settings: Set to true to enable caching
+cache: true
+
+# Example Registration Object Structure (optional)
+registration:
+  socialLogins: ['github', 'google', 'discord', 'openid', 'facebook']
+ 
+endpoints:
+   custom:
+    - name: "Ollama"
+      apiKey: "ollama"
+      baseURL: "http://host.docker.internal:11434/v1/"
+      models:
+        default: ["llama3"]
+        fetch: false
+      titleConvo: true
+      titleModel: "current_model"
+      summarize: false
+      summaryModel: "current_model"
+      forcePrompt: false
+      modelDisplayLabel: "Ollama"
+      addParams:
+        "stop": ["", "", "", "<|reserved_special_token"]    
